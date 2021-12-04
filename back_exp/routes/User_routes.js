@@ -135,24 +135,27 @@ router.post('/updatebasicstats' ,check_access_token, (req, res) => {
     console.log('in stats')
     const { typing_speed , error_rate } = req.body
     const payload = req.payload
-    console.log(payload,typing_speed,error_rate)
-    User.findOne({_id:payload._id})
-    .then( user => {
-        user.typing_speed = typing_speed
-        user.error_rate = error_rate
-        user.save()
-          .then(user => {
-              res.status(200).json({
-                  msg:"updated",
-                  data: user
-              })
-          })
+    console.log("hwre",payload,typing_speed,error_rate)
+    res.json({
+        "fsa":"sadfasfsdf"
     })
-    .catch( err => {
-        res.status(404).json({
-            msg: 'Not Found'
-        })
-    })
+    // User.findOne({_id:payload._id})
+    // .then( user => {
+    //     user.typing_speed = typing_speed
+    //     user.error_rate = error_rate
+    //     user.save()
+    //       .then(user => {
+    //           res.status(200).json({
+    //               msg:"updated",
+    //               data: user
+    //           })
+    //       })
+    // })
+    // .catch( err => {
+    //     res.status(404).json({
+    //         msg: 'Not Found'
+    //     })
+    // })
 
 })
 export default router

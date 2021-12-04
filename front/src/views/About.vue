@@ -1,7 +1,11 @@
 <template>
-  <div class="about row border">
-    <h1>This is an about page</h1>
-    <aboutComponent />
+  <div class="container-fluid w-100">
+    <div id="aboutheader" class="row">
+      <h1>About Typer</h1>
+    </div>
+    <div class="row mt-5">
+      <aboutComponent />
+    </div>
   </div>
 </template>
 
@@ -13,3 +17,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+#aboutheader {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

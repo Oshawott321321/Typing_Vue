@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div id='typerheader' class="row border border-dark justify-content-center">
+    <div id='typerheader' class="row justify-content-center">
       <div class="row">
         <h1 class="font-weight-bolder">
           Typer
         </h1>
       </div>
     </div>
-    <div class="row border border-primary">
+    <div class="row">
       <div class="col-md-12 typebox">
         <type-box />
       </div>

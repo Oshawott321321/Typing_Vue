@@ -76,9 +76,14 @@ export default {
       password: ''
     }
   },
-  created () {
+  mounted () {
+    console.log('in login');
     if (this.$store.state.auth.isAuthenticated) {
+      console.log('in auth login');
       this.$router.push('Dashboard')
+    } else {
+      console.log('in else login');
+      this.$router.push('Login')
     }
   },
   methods: {

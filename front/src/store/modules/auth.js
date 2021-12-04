@@ -47,7 +47,7 @@ const auth = {
 
   },
   actions: {
-    initialize_user ({ commit, getters, state }) {
+    async initialize_user ({ commit, getters, state }) {
       console.log('in actions', state.token)
       const token = state.token
       if (token === null) {
@@ -74,7 +74,7 @@ const auth = {
             Authorization: `Bearer ${token}`
           }
         }
-        axios.get('http://localhost:8081/user/userinfo', config)
+        await axios.get('http://localhost:8081/user/userinfo', config)
           .then(res => {
             console.log('res', res)
             commit('INITIALIZING_USER' , { payload: res.data, token: token })
